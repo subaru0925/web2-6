@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/*reset css*/
+*{
+margin: 0;
+padding: 0;
+}
+
+body{
+    background-color: gray;
+    font-family: 'Pattaya', sans-serif;
+}
+
+header{
+    padding: 10px;
+    text-align: center;
+    bockground-color: red;
+}
+section{
+    padding: 10px;
+    background-color: orange;
+}
+aside{
+    padding: 10px;
+    background-color: green;
+}
+footer{
+    padding: 10px;
+    background-color: blue;
+    text-align: center;
+}
+
+@media screen and (min-width:641px){
+    aside{
+        width: calc(50%-20px);
+        float:left;
+     }
+     #side:after{
+        /*clearfix*/
+        content:"";
+        display:block;
+        clear:both;
+     }
+}
+
+
+
+
+@media screen and (min-width:1025px){
+#main{
+max-width: 1024px;
+margin: auto;
+}
+section{
+width: calc(70%-20px);
+float:left;
+}
+#side{
+width:calc(1024px-718px);
+float:left;
+}
+aside{
+width: calc(100%-20px);
+}
+#main:after{
+content:"";
+display:block;
+clear:both;
+}
+}
+
+/*640px以下*/
+@media screen and (max-width:640px){
+    body{
+        bockground-color; red;
+     }
+ }
+ 
+/*640px以上　980px以下*/
+@media screen and (min-width:641px) and (max-width:980px){
+    body{
+        background-color: green;
+    }
+ }
+ 
+ /*981px以上*/
+ @media screen and (min-width:981px){
+    body{
+        background-color: blue;
+     }
+}
+
+@media screen and (orientation:portrait){
+    body:after {
+        content:"縦長";
+    }
+}
